@@ -15,12 +15,12 @@ print("\n""The output of the second practical exercise:""\n")
 def print_numbers(numb):
  # generate previous number and the sum between current and previous number
     previous_number = 0
-    for x in range(numb):
-        sum = previous_number + x
-        print("The current number is: ",x, "\n""The previous number is: ",
+    for y in range(numb):
+        sum = previous_number + y
+        print("The current number is: ",y, "\n""The previous number is: ",
           previous_number, "\n""The sum is: ", sum)
-        previous_number = x
-print_numbers(5)
+        previous_number = y
+print_numbers(10)
 
 
 
