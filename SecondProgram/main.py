@@ -1,4 +1,0 @@
-
-food = "rice"
-
-print(food)
