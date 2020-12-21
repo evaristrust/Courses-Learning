@@ -47,7 +47,7 @@ import random
 highest = 10
 answer = random.randint(1, highest)
 
-print("Please enter and number between 1 and {}".format(highest))
+print("Please enter and number between 1 and {}\n".format(highest))
 guess = 0
 # first check if the guessed number is not answer
 # if guess != answer:

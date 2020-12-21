@@ -1,6 +1,6 @@
 # choose a number between 1 and 20
 # if a player choose 0, break the loop
-# keep asking the playe to choose until they get it right
+# keep asking the player to choose until they get it right
 # if they get it, break the loop
 
 import random
@@ -21,4 +21,4 @@ while guess != number:
         print("You chose the right number")
 
 # Support the max_number is 10000! and I want to stop the loop at the 10th guess
-# How??
+# Which coding can i do to make this wish??
