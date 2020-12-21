@@ -53,3 +53,14 @@ print(range_one == range(3, 40, 3))
 # why should this turn true?
 
 print(range_one == range(3, 41, 3))
+
+list1 = range(0, 100)
+for i in list1[::2]:
+    print(i)
+
+# for instance, let's get reverse the sentence
+
+sentence = "dlrow eht ni segaugnal tseixes eht fo eno si nohtyP"
+
+reverse_sentence = sentence[::-1]
+print(reverse_sentence)

@@ -1,3 +1,7 @@
+# Create program that shows numbers in the range of 10
+# show the previous number and current one
+# show also the sum of the previous and current number
+
 print("\n""The output of the first practical exercise:""\n")
 def release_num(num):
     previousNum = 0

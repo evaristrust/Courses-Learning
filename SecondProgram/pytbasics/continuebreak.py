@@ -18,46 +18,34 @@
 # the seller says everything including primus but you don't wanna it
 # do that coding
 #
-# drinks = ["mtzing", "skol", "panache", "amstel", "primus" ]
-#
-# let_me_drink = ""
-#
-# for item in drinks:
-#     if item == "primus":
-#         let_me_drink = item
-#         break
-# else:
-#     print("Give me all of those")
-#
-# if let_me_drink == "primus":
-#     print("Can I have everything without primus please?")
+drinks = ["mtzing", "skol", "panache", "amstel", "primus" ]
 
+let_me_drink = ""
 
-
-
-
-
-
-
-
-
-
-
-
-
-watch_games = ["Football","Basket", "Box","Tennis" , "Volleyball"]
-
-funny_game = ""
-
-for item in watch_games:
-    if item == "Box":
-        funny_game = item
+for item in drinks:
+    if item == "primus":
+        let_me_drink = item
         break
 else:
-    print("I will watch all of these games")
+    print("Give me all of those")
 
-if funny_game == "Box":
-    print("Can I have tickets for all other games excluding Box?")
+if let_me_drink == "primus":
+    print("Can I have everything without primus please?")
+
+#
+# watch_games = ["Football","Basket", "Box","Tennis" , "Volleyball"]
+#
+# funny_game = ""
+#
+# for item in watch_games:
+#     if item == "Box":
+#         funny_game = item
+#         break
+# else:
+#     print("I will watch all of these games")
+#
+# if funny_game == "Box":
+#     print("Can I have tickets for all other games excluding Box?")
 
 
 

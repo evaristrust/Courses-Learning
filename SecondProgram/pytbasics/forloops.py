@@ -47,10 +47,10 @@ print("The number is {} ".format(newNumber))
 
 # let's nest loops ! like do calculations of two array elements!
 
-# for i in range(1, 13):
-#     for j in range(1, 5):
-#         print("{0} times {1} is {2}".format(i, j, i*j))
-#     print("====================")
+for i in range(1, 13):
+    for j in range(1, 5):
+        print("{} times {} is {}".format(i, j, i*j))
+    print("====================")
 
 # for i in range(1, 13):
 #     for j in range(1, 5):

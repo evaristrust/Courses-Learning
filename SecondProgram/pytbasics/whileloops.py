@@ -67,7 +67,7 @@ guess = 0
 #           "The random generated number is {} and you choose {} "
 #               "there you guessed it".format(answer, guess))
 
-# you can see that the loop is stopping at two guessed! here is where the while loop is so important
+# you can see that the loop is stopping at two guesses! here is where the while loop is so important
 # we are going to do the same example as above but we will break the loop if a player input 0 (zero)
 while guess != answer:
     guess = int(input())
