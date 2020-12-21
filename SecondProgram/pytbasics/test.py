@@ -20,5 +20,5 @@ while guess != number:
     else:
         print("You chose the right number")
 
-# Support the max_number is 10000! and I want to stop the loop at the 10th guess
-# Which coding can i do to make this wish??
+# Support the max_number is 10000! and I want to stop the loop at the player's 10th guess
+# Which coding can i do to make this wish?? I don't get how i can do it
