@@ -50,6 +50,7 @@ print(range_one)
 # simply
 print(range_one == range(3, 40, 3))
 # should return true
+
 # why should this turn true?
 
 print(range_one == range(3, 41, 3))
