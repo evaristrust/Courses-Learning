@@ -42,7 +42,7 @@ while True:
  # if the loc is 0, we are going to break the loop
     if loc == 0:
         break
-    direction = input("choose from these available exits: " + available_exits).upper()
+    direction = input("choose from these available exits: {} ".format(available_exits)).upper()
     print()
     if direction in exits[loc]:
         loc = exits[loc][direction]
