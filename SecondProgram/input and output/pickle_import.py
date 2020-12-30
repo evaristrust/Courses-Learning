@@ -1,9 +1,9 @@
+import pickle
+
 # concept: Serialization: the process that allows objects to be saved to file
 #                           so that they can be restored from the file later
 
 # python provides mechanism of serializing objects using method called pickling
-
-import pickle
 
 imelda = ("More Maythtem",
           "Imelda May",
@@ -29,7 +29,7 @@ print(artist)
 print(year)
 
 for song in tracks:
-    track_number, track_name = tracks
+    track_number, track_name = song
     print(track_number, track_name)
 
 # You can also stored different types of data or information in
