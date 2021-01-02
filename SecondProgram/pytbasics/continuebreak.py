@@ -23,7 +23,7 @@ drinks = ["mtzing", "skol", "panache", "amstel", "primus" ]
 let_me_drink = ""
 
 for item in drinks:
-    if item == "primus":
+    if item == "primus": # when you find primus, stop
         let_me_drink = item
         break
 else:
@@ -46,6 +46,42 @@ if let_me_drink == "primus":
 #
 # if funny_game == "Box":
 #     print("Can I have tickets for all other games excluding Box?")
+
+
+# in the list of destinations, choose your destinations without Rusizi
+
+destinations = ["Kigali", "Rusizi","Butare", "Musanze", "Rwamagana"]
+
+let_me_go = ""
+
+for place in destinations:
+    if place == "Rusizi":
+        let_me_go = place
+        break
+    else:
+        print("I will go to those places")
+
+if let_me_go == "Rusizi":
+    print("Can I go to other places without {}".format(let_me_go))
+
+
+
+# types of churches in rwanda
+
+churches = ['Catholics', 'islam', 'protestant', 'Adventist']
+
+# we want to select a girlfriend from any church except islam or adventists
+choose_girl = ''
+for girl in churches:
+    if girl == 'Islam' or girl == 'adventist':
+        choose_girl = girl
+        break
+else:
+    print('She can be my girlfriend')
+
+if choose_girl == 'Islam' or choose_girl == 'adventist':
+    print('Can i get a pass of any girl except islams and adventists? Thanks!')
+
 
 
 

@@ -36,8 +36,8 @@ start_time = my_timer()
 input("Press enter to stop")
 end_time = my_timer()
 
-print("You started at" + time.strftime("%X", time.localtime(start_time)))
-print("You end at" + time.strftime("%X", time.localtime(end_time)))
+print("You started at " + time.strftime("%X", time.localtime(start_time)))
+print("You end at " + time.strftime("%X", time.localtime(end_time)))
 print("Your reaction time was {} seconds".format(end_time - start_time))
 
 # in the place of time imported, we can also import
