@@ -56,3 +56,62 @@ for i in range(1, 13):
 #     for j in range(1, 5):
 #         print("{0} times {1} is {2}".format(i, j, i * j), end="\t")
 #     print("")
+
+# print numbers in styles like a triangle
+
+largest_number = 10
+
+for row in range(0, largest_number):
+    for column in range(1, row + 1):
+        print(column, end=' ')
+    print('')
+
+#print the sum of the numbers between 0 and 10! 10 included
+print(".." * 40)
+sum1 = 0
+
+for i in range(11):
+    sum1 += i
+
+print("The sum is {} ".format(sum1))
+
+# Ask the user to find the sum of the numbers from 0 and his prefered number
+# user_number = int(input("Find the sum of numbers from 0 and your prefered number: "))
+#
+# sum2 = 0
+#
+# for w in range(user_number +1):
+#     sum2 += w
+#
+# print("The sum of numbers from 0 and {} is {} ".format(w, sum2))
+
+# Ask the user to see the multiplication table of any number
+
+print("We are going to find the multiplication table of your number")
+your_number = int(input("Enter your number here: "))
+
+for num in range(13):
+    print("{} times {} is {} ".format(your_number, num, your_number * num))
+
+# Printing a sex pattern but from the above numbers
+
+n = 10
+k = 10
+
+for i in range(0, n + 1):
+    for j in range(k-i, 0, -1):
+        print(j, end=' ')
+    print()
+
+# Going to print the prime numbers from 1 to 100
+
+start = 1
+end = 100
+
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            print(num)

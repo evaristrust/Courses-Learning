@@ -94,14 +94,14 @@ square_set.discard(4)
 print(square_set)
 square_set.discard(8)
 print(square_set)
-# square_set.remove(8) # this will throw an error
+# square_set.remove(8) # this will throw an error cos we removing an element which is not there
 print(square_set)
 
 # using discard is safe
 # but in some cases u will need to use remove just to detect an error
 # cos discard won't tell u if an element was included
 
-#let's using try and except
+#let's using try and except KeyError
 
 try:
     square_set.remove(8)

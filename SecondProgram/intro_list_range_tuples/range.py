@@ -64,4 +64,4 @@ for i in list1[::2]:
 sentence = "dlrow eht ni segaugnal tseixes eht fo eno si nohtyP"
 
 reverse_sentence = sentence[::-1]
-print(reverse_sentence)
+print(sentence[::-1])
