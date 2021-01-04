@@ -123,14 +123,32 @@
 from turtle import circle, forward, backward, left, right, done
 
 import time
+#
+# forward(100)
+# backward(120)
+# left(240)
+# right(60)
+# circle(100)
+# time.sleep(10)
+# done()
+#
 
-forward(100)
-backward(120)
-left(240)
-right(60)
-circle(100)
-time.sleep(10)
-done()
+import time
+import random
+
+from time import perf_counter as my_time
+input('press enter to start: ')
+wait_time = random.randint(1, 6)
+time.sleep(wait_time)
+start_time = my_time()
+
+input('press enter to stop: ')
+end_time = my_time()
+
+print('you started at ', time.strftime('%X',time.localtime(start_time)))
+print('you ended aat ', time.strftime('%X', time.localtime(end_time)))
+print('You used {} seconds'.format(end_time - start_time))
+
 
 
 
