@@ -49,3 +49,31 @@ localize_utc = pytz.utc.localize(my_utc_time)
 
 print("My local time is {}, with {} timezone".format(localize_local, localize_local.tzinfo))
 print("My UTC time is {}, with {} timezone".format(localize_utc, localize_utc.tzinfo))
+
+print("**" * 40)
+#
+# def astimezone(self, tz=None):
+#
+#     if tz is None:
+#         tz = self._local_timezone()
+#     elif not isinstance(tz, tzinfo):
+#         raise TypeError("tz argument must be an instance of tzinfo")
+#
+#     mytz = self.tzinfo # code from sami!
+#     if mytz is None:
+#         mytz = self._local_timezone()
+#         myoffset = mytz.utcoffset(self)
+#     else:
+#         myoffset = mytz.utcoffset(self)
+#         if myoffset is None:
+#             mytz = self.replace(tzinfo=None)._local_timezone()
+#             myoffset = mytz.utcoffset(self)
+#
+#     if tz is mytz:
+#         return self
+#
+#     # Convert self to UTC, and attach the new time zone object.
+#     utc = (self - myoffset).replace(tzinfo=tz)
+#
+#     # Convert from UTC to tz's local time.
+#     return tz.fromutc(utc)
