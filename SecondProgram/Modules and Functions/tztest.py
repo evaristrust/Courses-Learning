@@ -44,7 +44,7 @@ import pytz, datetime
 my_local_time = datetime.datetime.now()
 my_utc_time = datetime.datetime.utcnow()
 
-localize_local = pytz.utc.localize(my_local_time).astimezone() # this is ain't giving my local time!
+localize_local = pytz.utc.localize(my_utc_time).astimezone() # this is ain't giving my local time!
 localize_utc = pytz.utc.localize(my_utc_time)
 
 print("My local time is {}, with {} timezone".format(localize_local, localize_local.tzinfo))
