@@ -29,9 +29,10 @@ def new_hits(*args, sep= "**", end='\n', file=None, flush=False):
     for arg in args:
         songs += str(arg) + sep
     print(songs, end=end, file=file, flush=flush)
-
+    print("These songs are the hittest ones in town")
 with open("songs", mode="w") as songs_file:
     new_hits("Samoya", "Igare", "Micro", "Ubushyuhe", file=songs_file)
+
 
 # let's try something like return in the function and see what it is!
 def new_hits(*args, sep= "**", end='\n', file=None, flush=False):
