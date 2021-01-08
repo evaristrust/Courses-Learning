@@ -48,7 +48,7 @@ main_window = tkinter.Tk()
 main_window.title("My crap parabola")
 main_window.geometry("640x480")
 #creating the variable canvas
-canvas = tkinter.Canvas(main_window, width=640, height=480)
+canvas = tkinter.Canvas(main_window, width=640, height=480, background="black")
 canvas.grid(row=0, column=0)
 
 draw_axes(canvas) # calling the function
@@ -66,3 +66,6 @@ circle(canvas, 10, -30, -30)
 circle(canvas, 10, 0, 0)
 
 main_window.mainloop()
+
+# Jumped blackkjack game... will come on it later
+# next video to this one
