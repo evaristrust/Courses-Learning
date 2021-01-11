@@ -1,7 +1,7 @@
 try:
     import tkinter
 except ImportError: # python 2
-    import tkinter as tkinter
+    import Tkinter as tkinter
 
 # print(tkinter.TkVersion)
 # print(tkinter.TclVersion)
