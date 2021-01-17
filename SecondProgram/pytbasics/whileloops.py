@@ -79,6 +79,7 @@ while guess != answer:
         print("guess lower")
     else:
         print("You guessed it thanks!")
+    print("You have guessed it for the first time!")
 
 
 

@@ -81,9 +81,7 @@ else:
 # print the prime number from 1 and 200
 
 start = 1
-
 end = 200
-
 for num in range(start, end +1):
     if num > 1: # all the numbers should be greater than 1
         for x in range(2, num):
@@ -100,7 +98,7 @@ num1, num2 = 0, 1
 count = 0
 print('fibonacci sequence: ')
 while count < terms:
-    print(num1, end=' ')
+    print(num1, end= " ")
     total = num1 + num2
     num1 = num2
     num2 = total
