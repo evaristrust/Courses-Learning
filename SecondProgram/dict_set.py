@@ -101,3 +101,4 @@ for content in f_tuple:
 # what if i want to turn my tuple back to dictionary @ i will use dict method
 
 print(dict(f_tuple))
+
