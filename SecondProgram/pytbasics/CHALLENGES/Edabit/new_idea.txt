@@ -1,0 +1,8 @@
+Create a ussd application that helping the eef
+in reporting and evaluating their projects
+
+#reporting what? a new customer right way
+# the progress of their projects
+# notify a franchisee about a customer with issue/problem via their phones
+# report the quality of their work
+
