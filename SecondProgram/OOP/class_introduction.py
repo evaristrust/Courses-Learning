@@ -5,7 +5,9 @@
 # tecno: South Africa, tecno camon cx, $ 200
 # iphone: USA, iphone XPro, $1000
 
-class telephones(object):
+class Telephones(object):
+
+    selected_phones = "Phones that are on top!"
 
     def __init__(self, country, model, price):
         self.country = country
@@ -14,17 +16,17 @@ class telephones(object):
 
 # create the instances
 
-samsung_s8 = telephones("Korea", "Samsung S8 Plus", 600)
+samsung_s8 = Telephones("Korea", "Samsung S8 Plus", 600)
 print(samsung_s8.country)
 print(samsung_s8.model)
 print(samsung_s8.price)
 
-samsung_s9= telephones("Korea", "Samsung S9", 800)
+samsung_s9= Telephones("Korea", "Samsung S9", 800)
 print(samsung_s9.country)
 print(samsung_s9.model)
 print(samsung_s9.price)
 
-iphone= telephones("USA", "Iphone Xpro", 1000)
+iphone= Telephones("USA", "Iphone Xpro", 1000)
 print(iphone.country)
 print(iphone.model)
 print(iphone.price)
@@ -37,6 +39,18 @@ print("models: {0}: {1}--${2}, {3}: {4}--${5}"
 print("models: {0.model}: {0.country}--${0.price}, {1.model}: {1.country}--${1.price},"
       "{2.model}: {2.country}--${2.price}"
       "".format(samsung_s8, samsung_s9, iphone)) # simplifying things
+# switch the class attributes
+print("Which selected phones to BigBrands")
+Telephones.selected_phones = "BigBrands"
+
+print(samsung_s8.selected_phones) # show how the instances of a class share the same class attribute
+print(samsung_s9.selected_phones)
+print(iphone.selected_phones)
+print(Telephones.__dict__)
+print(samsung_s8.__dict__)
+
+
+
 
 # that's how we deal with classes
 
@@ -47,3 +61,26 @@ Instantiate: Create an instance of a class
 Method: a function defined in a class 
 Attribute: a variable bound to an instance of a class 
 """
+print("......" * 10)
+class Epl(object):
+
+    def __init__(self, team, position):
+        self.team = team
+        self.position = position
+
+manchester = Epl("ManU", 1)
+liverpool = Epl("Liverpool", 2)
+arsenal = Epl("Arsenal", 3)
+
+print("The top three teams are: {0.position}. {0.team}\t"
+      "{1.position}. {1.team}\t {2.position}. {2.team}".format(manchester, liverpool, arsenal) )
+
+
+
+
+
+
+
+
+
+
