@@ -19,7 +19,7 @@ class Account:
             self.balance -= amount
             self.show_balance()
         else:
-            print('OOps! You don\'t have that balance! You need to top up {} '
+            print('OOps! You don\'t have that balance! You need to top up at least {} '
                   'to proceed'.format(amount - self.balance))
             self.show_balance()
 
