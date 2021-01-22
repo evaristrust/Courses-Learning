@@ -15,7 +15,7 @@ class Account:
             self.balance -= amount
     def show_balance(self):
         print("Your balance is {}".format(self.balance))
-if __name__ == '__main__':
+if __name__ == '__main__': # Is this a buildin crap?
     full_name = Account("Evariste", 0)
     full_name.show_balance()
     full_name.deposit(5000)
