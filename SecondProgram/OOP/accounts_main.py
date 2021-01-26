@@ -54,4 +54,4 @@ if __name__ == '__main__': # Is this a buildin crap?
     full_name1.withdraw(2000)
     full_name1.show_transaction()
 
-# stopped and finished the vid 6.. will immediately start vid 7 
+# stopped and finished the vid 6.. will immediately start vid 7

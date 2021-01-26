@@ -67,14 +67,54 @@ champions = {"epl": "Arsenal, Chelsea, Man utd",
 # ask a user to put a number
 # check if that nber is a prime
 # a prime an integer nber only divided by 1 and itself
+#
+# num = int(input("Enter you number: "))
+# for x in range(2, num):
+#     if num % x == 0:
+#         print("It is not a prime")
+#         break
+# else:
+#     print("It is a prime")
 
-num = int(input("Enter you number: "))
-for x in range(2, num):
-    if num % x == 0:
-        print("It is not a prime")
-        break
-else:
-    print("It is a prime")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
