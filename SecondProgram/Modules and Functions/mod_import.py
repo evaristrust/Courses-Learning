@@ -2,15 +2,15 @@ from turtle import forward, right, backward, left, done, circle
 import shelve, webbrowser
 import turtle
 import time
-#
-# turtle.forward(250)
-# turtle.right(150)
-# turtle.forward(250)
-# turtle.backward(180)
-# turtle.left(240)
-# time.sleep(10)
-# turtle.circle(100)
-# turtle.done()
+
+turtle.forward(250)
+turtle.right(150)
+turtle.forward(250)
+turtle.backward(180)
+turtle.left(240)
+time.sleep(10)
+turtle.circle(100)
+turtle.done()
 # #
 # # turtle.done()
 # forward(250)

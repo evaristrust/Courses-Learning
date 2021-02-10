@@ -15,7 +15,7 @@ print(("a", "b", "c"))
 
 album_one = ("Romance", "Camila", 2019)
 album_two = ("El negreto", "Akon", 2019)
-album_three = ("Plus", "Ed Sheran", 2011, (1, "party"), (2, "HelloGod"), (3, "Salute"))
+album_three = ("Plus", "Ed Sheran", 2011, ((1, "party"), (2, "HelloGod"), (3, "Salute")))
 print(album_one)
 print(album_two)
 print(album_three)
@@ -30,13 +30,11 @@ print(album_one)
 
 # here is another example
 
-name, artist, year, track1, track2, track3 = album_three
+name, artist, year, tracks = album_three
 print(name)
 print(artist)
 print(year)
-print(track1)
-print(track2)
-print(track3)
+print(tracks)
 
 
 

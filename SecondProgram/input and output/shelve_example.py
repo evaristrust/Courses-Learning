@@ -1,6 +1,6 @@
 import shelve
 
-with shelve.open("ShelfTest") as fruits:
+with shelve.open("ShelfTest") as fruits: # opening a persistant dictionary fruits
     fruits["lemon"] = "sweet and happiness generator"
     fruits["orange"] = "highly testing and also for dates"
     fruits["mango"] = "ate when i was young at mom fields"

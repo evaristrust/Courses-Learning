@@ -4,7 +4,8 @@ class kettle(object):
         self.make = make
         self.price = price
         self.on = False
-    def swith_on(self):
+
+    def swith_on(self): # this is a method: use to switch the kettle on/off
         self.on = True
 
 hamilton_kettle = kettle("Hamilton", 12)

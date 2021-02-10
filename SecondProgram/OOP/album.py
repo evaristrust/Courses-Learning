@@ -17,7 +17,7 @@ class Song:
         """
         self._title = title
         self._artist = artist
-        # self._duration = duration
+        self._duration = duration
 
 class Album:
     """Class to represent an album
@@ -135,8 +135,6 @@ if __name__ == '__main__':
 
     # create_checkfile(artists)
     # will imediately begin on the vid 12
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 string = "0123456789"
-
+#
 # for i in string:
-#     print(i)
+#     print(i, end='')
 
 # iterations: See how the iteration is done
 

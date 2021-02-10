@@ -9,19 +9,21 @@ class Account:
     def _current_time():
         utc_time = datetime.datetime.utcnow()
         return pytz.utc.localize(utc_time)
+
     def __init__(self, name, balance):
         self._name = name
         self._balance = balance
         self._transaction_list = []
         print("The account created for", self._name)
 
-    def deposit(self, amount):
+    def deposit(self, amount): # creating a deposit method
         if amount > 0:
             print("You deposited {}".format(amount))
             self._balance += amount
             self.show_balance()
             # self.transaction_list.append((pytz.utc.localize(datetime.datetime.utcnow()), amount))
             self._transaction_list.append((Account._current_time(), amount)) # simplifying with the static method
+
     def withdraw(self, amount):
         if 0 < amount <= self._balance:
             print("You withdrew {}".format(amount))
@@ -32,9 +34,11 @@ class Account:
             print("OOps! You don't have that balance! You need to top up at least {} "
                   "to proceed".format(amount - self._balance))
             self.show_balance()
-    def show_balance(self):
+
+    def show_balance(self): # a method that will display the balance
         print("Your balance is {}".format(self._balance))
-    def show_transaction(self):
+
+    def show_transaction(self): # what  if the user what's to see the history?
         for date, amount in self._transaction_list:
             if amount > 0:
                 trans_type = 'deposited'

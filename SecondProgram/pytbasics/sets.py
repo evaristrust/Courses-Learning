@@ -21,7 +21,7 @@ for animal in animals:
 wild_animals = set(["dog", "lion", "tiger", "zebra"])
 print(wild_animals)
 
-# the better way of doing empty set is to use set constructor
+# the better way of creating empty set is to use set constructor
 # rather than using empty curely braces
 
 empty_set = set()

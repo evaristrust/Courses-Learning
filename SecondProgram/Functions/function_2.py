@@ -1,19 +1,18 @@
-def get_water():
-    width = 80
-    text = "WASAC is fucking us in the ass"
-    left_margin = width - len(text)
-    print(" " * left_margin, text)
-
-get_water()
+# def get_water():
+#     width = 80
+#     text = "WASAC is fucking us in the ass"
+#     left_margin = width - len(text)
+#     print(" " * left_margin, text)
+#
+# get_water()
 
 # using for loop in a function
 
-# def new_hits(*args):
-#     songs = ""
-#     for arg in args:
-#         songs += str(arg) + "**" # a separator here
-#     print(songs)
-# new_hits("Samoya", "Igare", "Micro", "Ubushyuhe")
+def new_hits(*args):
+    songs = ""
+    for arg in args:
+        songs += str(arg) + '**' # a separator here
+new_hits("Samoya", "Igare", "Micro", "Ubushyuhe")
 
 # modify the codes a bit mn!
 # def new_hits(*args, sep= "**", end='\n', file=None, flush=False):
@@ -42,3 +41,22 @@ def new_hits(*args, sep= "**", end='\n', file=None, flush=False):
     return songs
 
 print(new_hits("Samoya", "Igare", "Micro", "Ubushyuhe"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

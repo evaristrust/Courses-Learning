@@ -8,7 +8,7 @@
 class Telephones(object):
 
     selected_phones = "Phones that are on top!"
-
+    # Initializing the class
     def __init__(self, country, model, price):
         self.country = country
         self.model = model
@@ -40,7 +40,7 @@ print("models: {0.model}: {0.country}--${0.price}, {1.model}: {1.country}--${1.p
       "{2.model}: {2.country}--${2.price}"
       "".format(samsung_s8, samsung_s9, iphone)) # simplifying things
 # switch the class attributes
-print("Which selected phones to BigBrands")
+print("switch selected phones to BigBrands")
 Telephones.selected_phones = "BigBrands"
 
 print(samsung_s8.selected_phones) # show how the instances of a class share the same class attribute
@@ -68,12 +68,12 @@ class Epl(object):
         self.team = team
         self.position = position
 
-manchester = Epl("ManU", 1)
-liverpool = Epl("Liverpool", 2)
-arsenal = Epl("Arsenal", 3)
+one = Epl("ManU", 1)
+two = Epl("Liverpool", 2)
+three = Epl("Arsenal", 3)
 
 print("The top three teams are: {0.position}. {0.team}\t"
-      "{1.position}. {1.team}\t {2.position}. {2.team}".format(manchester, liverpool, arsenal) )
+      "{1.position}. {1.team}\t {2.position}. {2.team}".format(one, two, three))
 
 
 

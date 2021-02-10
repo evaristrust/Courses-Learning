@@ -5,3 +5,4 @@ def get_water():
     print(" " * left_margin, text)
 
 get_water()
+

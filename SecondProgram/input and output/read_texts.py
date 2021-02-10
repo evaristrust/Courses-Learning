@@ -23,7 +23,7 @@
 #         if "PROJECT MANAGEMENT" in line.upper():
 #             print(line, end="")
 
-
+# doing this using while:
 with open("C:\\Users\\Evariste2020\\Desktop\\tech.txt", "r") as jabber:
     line = jabber.readline()
     while line:

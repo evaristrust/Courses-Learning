@@ -4,13 +4,12 @@
 def fact(x):
     result = 1
     for y in range(2, x + 1):
-        if x > 1:
+        if x > 1: # the numbr should be positive
             result *= y
     return result
 
 for r in range(20):
     print(r, fact(r))
-
 
 # try it here!
 def find_fact(n):

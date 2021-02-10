@@ -47,17 +47,17 @@
 # print(sorted_even == even_numbers)
 # # this will print false! just because the order is not the same
 #
-# odd_num = [1, 3, 5, 7]
-# even_num = [2, 4, 6, 8]
-#
-# get_numbers = [odd_num, even_num]
+odd_num = [1, 3, 5, 7]
+even_num = [2, 4, 6, 8]
 
-# print(get_numbers)
-#
-# for items in get_numbers:
-#     print(items)
-#     for value in items:
-#         print(value)
+get_numbers = [odd_num, even_num]
+
+print(get_numbers)
+
+for items in get_numbers:
+    print(items)
+    for value in items:
+        print(value)
 
 # Another example:
 menu = []

@@ -23,7 +23,7 @@ for items in menu:
 my_colors = ["black", "white", "red","yellow", "purple", "white",
              "black", "white","black", "orange", "purple"]
 
-# convert it back to the dictionaries and then back to the list
+# convert it back to the dictionaries and then back to the list using fromkeys builtin function
 
 remove_duplicates = list(dict.fromkeys(my_colors))
 
@@ -34,7 +34,6 @@ print("The list without duplicates is {}".format(remove_duplicates))
 def my_list(x):
     return list(dict.fromkeys(x))
 
-original_list = my_list(["pens", "books", "books", "notebook", "pens", "notebook"])
+original_list = ["pens", "books", "books", "notebook", "pens", "notebook"]
 
-print("Your child will need {}: ".format(original_list))
-
+print("Your child will need {}: ".format(my_list(original_list)))

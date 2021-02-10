@@ -132,37 +132,24 @@ import time
 # time.sleep(10)
 # done()
 #
+#
+# import time
+# import random
+#
+# from time import perf_counter as my_time
+# input('press enter to start: ')
+# wait_time = random.randint(1, 6)
+# time.sleep(wait_time)
+# start_time = my_time()
+#
+# input('press enter to stop: ')
+# end_time = my_time()
+#
+# print('you started at ', time.strftime('%X',time.localtime(start_time)))
+# print('you ended aat ', time.strftime('%X', time.localtime(end_time)))
+# print('You used {} seconds'.format(end_time - start_time))
 
-import time
-import random
-
-from time import perf_counter as my_time
-input('press enter to start: ')
-wait_time = random.randint(1, 6)
-time.sleep(wait_time)
-start_time = my_time()
-
-input('press enter to stop: ')
-end_time = my_time()
-
-print('you started at ', time.strftime('%X',time.localtime(start_time)))
-print('you ended aat ', time.strftime('%X', time.localtime(end_time)))
-print('You used {} seconds'.format(end_time - start_time))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(round(1.73))
 
 
 

@@ -10,9 +10,9 @@ imelda = "More Maythtem", "Imelda May", 2011, \
 
 name, artist, year, tracks = imelda
 
-print(name)
-print(artist)
-print(year)
+print('Name of album: {}'.format(name))
+print('Artist\'s name: {}'.format(artist))
+print('Year of publication: {}'.format(year))
 # print("\t",t1, "\t", t2, "\t", t3, "\t", t4)
 # the above can work, but also I am going to use for loop
 for song in tracks:
