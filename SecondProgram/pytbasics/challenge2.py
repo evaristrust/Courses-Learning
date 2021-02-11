@@ -31,15 +31,17 @@
 #     print("The segment {} contains {} characters".format(segment, segment_length))
 
 # There are many ways to solve a challenge
-ip_address = input("Enter you IP address: An IP address consists of 4 numbers,"
-                   " separated by each other with a period ")
+ip_address = input("Enter you IP address: ")
 segment = 1
 segment_length = 0
 if ip_address[-1] != ".":
     ip_address += "."
+else:
+    print('Ip address needs a number after a point')
 
-for character in ip_address:
-    if character == ".":
+
+for char in ip_address:
+    if char == ".":
         print("The segment {} contains {} characters".format(segment, segment_length))
         segment += 1
         segment_length = 0

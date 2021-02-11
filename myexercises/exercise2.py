@@ -2,7 +2,7 @@
 # show the previous number and current one
 # show also the sum of the previous and current number
 
-print("\n""The output of the first practical exercise:""\n")
+print("\nThe output of the first practical exercise:\n")
 def release_num(num):
     previousNum = 0
     for i in range(num):
@@ -25,10 +25,6 @@ def print_numbers(numb):
           previous_number, "\n""The sum is: ", sum)
         previous_number = y
 print_numbers(10)
-
-
-
-
 
 
 

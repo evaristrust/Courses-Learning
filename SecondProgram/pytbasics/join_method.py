@@ -38,7 +38,6 @@ loc = 1
 while True:
 # Accessing the available exits in the exit list and printing the matching locations
     available_exits = " , ".join(exits[loc].keys())
-    print(locations[loc])
  # if the loc is 0, we are going to break the loop
     if loc == 0:
         break

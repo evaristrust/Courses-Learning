@@ -3,10 +3,10 @@
 #     print(i)
 # 2222. now pint out the separate digits of 130340494049440404u404u04u04899
 
-# num = "130340494049440404u404u04u04899"
-# for i in range(0, len(num)):
-#     # print(num[i])
-#     print(num[i], end="\n")
+num = "130340494049440404u404u04u04899"
+for i in range(0, len(num)):
+    # print(num[i])
+    print(num[i], end="\n")
 
 # let's say that you've got so many data separated by a comma but u wanna remove them
 
@@ -15,14 +15,14 @@
 #     if num[i] in "0123456789":
 #         print(num[i], end="")
 
-# num = "130,34,049,404,9,44,04,04,u4,04,u04,u04,899"
-# cleanNumber = ""
-# for i in range(0,len(num)):
-#     if num[i] in "0123456789":
-#         cleanNumber = cleanNumber + num[i]
-#
-# newNumber = int(cleanNumber)
-# print("The number is {}".format(newNumber))
+num = "130,34,049,404,9,44,04,04,u4,04,u04,u04,899"
+cleanNumber = ""
+for i in range(0,len(num)):
+    if num[i] in "0123456789":
+        cleanNumber += num[i]
+
+newNumber = int(cleanNumber)
+print("The number is {}".format(newNumber))
 
 # Try the above with a new approach and use augmented operator assignment
 
@@ -93,7 +93,7 @@ your_number = int(input("Enter your number here: "))
 for num in range(13):
     print("{} times {} is {} ".format(your_number, num, your_number * num))
 
-# Printing a sex pattern but from the above numbers
+# Printing a sexy pattern but from the above numbers
 
 n = 10
 k = 10

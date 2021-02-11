@@ -140,10 +140,40 @@ example = "I will even die an arsenal fan unless you mothefuckers are shouting"
 
 # create a set of vowels
 
-vowels = frozenset("aiueo")
+vowels = frozenset("aiueo ")
 # create a set of example
 
 example_set = set(example)
 
 final_set = example_set.difference(vowels)
 print(sorted(final_set))
+
+
+
+my_sentence = 'Nothing can\'t stop me! I am all way up'
+
+my_vowels = frozenset('auoie\'! ')
+
+my_sent_set = set(my_sentence)
+
+# my_sent_set.difference_update(my_vowels)
+set_final = my_sent_set.difference(my_vowels)
+print('Consonents in the sentence are: {}'.format(sorted(set_final)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -68,19 +68,17 @@ if let_me_go == "Rusizi":
 
 # types of churches in rwanda
 
-churches = ['Catholics', 'islam', 'protestant', 'Adventist']
+churches = ['Catholics', 'Islam', 'protestant', 'Adventist']
 
 # we want to select a girlfriend from any church except islam or adventists
 choose_girl = ''
 for girl in churches:
-    if girl == 'Islam' or girl == 'adventist':
+    if girl == 'islam' or girl == 'adventist':
         choose_girl = girl
+        print('Can i get a pass of any girl except islams and adventists? Thanks!')
         break
 else:
     print('She can be my girlfriend')
-
-if choose_girl == 'Islam' or choose_girl == 'adventist':
-    print('Can i get a pass of any girl except islams and adventists? Thanks!')
 
 
 
