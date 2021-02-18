@@ -92,6 +92,32 @@ w.display_result()
 
 # Learn Multilevel inheritance: Child and Grandchhild relationship
 
+class Base:
+    #constructor
+    def __init__(self, name):
+        self.n = name
+    #getName
+    def get_name(self):
+        return self.n
+#child
+class Child(Base):
+    def __init__(self, name, age):
+        self.age = age
+        Base.__init__(self, name)
+    #getAge
+    def get_age(self):
+        return self.age
+#grandChild
+class grand_child(Child):
+    def __init__(self, name, age, address):
+        self.address = address
+        Child.__init__(self, name, age)
+    #getAddress
+    def get_address(self):
+        return self.address
+
+c = grand_child('MyChild', 20, 'KG 08 AV 108, KIGALI VEGAS')
+print('My child info:\n{} {} {}'.format(c.get_name(), c.get_age(), c.get_address())) 
 
 
 
