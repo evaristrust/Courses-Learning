@@ -67,7 +67,7 @@ class Woman(object): # parent class 1
 
     def display_result(self):
         print('Details of my frau are: '
-              'Name: {}\nAge: {}\n Education Level: {}\nSchool Attended: {}'
+              'Name: {}\nAge: {}\nEducation Level: {}\nSchool Attended: {}'
               'Born City: {}\nHeight: {}\nSalary: ${}\nHasAJet: {}'
               .format(self.name, self.age, self.level, self.school, self.city,
                       self.height, self.salary, self.hasjet))
@@ -82,13 +82,15 @@ class Date_her(Woman, Girl_f): # child class of two parents
     def __init__(self, name, age, level, school, city, height, salary):
         self.salary = salary
         self.hasjet = True
-        Girl_f.__init__(schol, city, height)
-        Woman.__init__(name, age, level)
+        Girl_f.__init__(self,school, city, height)
+        Woman.__init__(self,name, age, level)
 
-w = Woman('Taylor Swift', 30, 'PhD in Music', 'Havard Music School', 'New York',
+w = Date_her('Taylor Swift', 30, 'PhD in Music', 'Havard Music School', 'New York',
           1.79, 400000)
 w.display_result()
 
+
+# Learn Multilevel inheritance: Child and Grandchhild relationship
 
 
 
