@@ -74,6 +74,62 @@ three = Epl("Arsenal", 3)
 
 print("The top three teams are: {0.position}. {0.team}\t"
       "{1.position}. {1.team}\t {2.position}. {2.team}".format(one, two, three))
+#let's now add two numbers using a class 
+class Addition:
+    first_number = 0
+    second_number = 0
+    my_answer = 0
+
+    def __init__(self, f, s):                                    # these are constructors
+        self.first_number = f
+        self.second_number = s
+
+    def display(self):
+        print('The first number is {}'.format(self.first_number))
+        print('The second number is {}'.format(self.second_number))
+        print('The addition of these numbers is {}'.format(self.answer))
+
+    def my_addition(self):
+        self.answer = self.first_number + self.second_number
+
+sum = Addition(1000, 3000)
+sum.my_addition()
+sum.display()
+
+# learn about a destructor in python  del
+
+class Employee:
+    branch1 = []
+    branch2 = []
+    branch3 = []
+    
+    def __init__(self, l1, l2, l3):
+        self.branch1 = l1
+        self.branch2 = l2
+        self.branch3 = l3
+
+    def get_staff(self):
+        print('The names of staff employees are {}'.format(self.overall))
+
+    def overall(self):
+        self.overall = self.branch1 + self.branch2 + self.branch3
+    #deleting (calling a destruction)
+
+    def __del__(self):
+        print('Destructor called, Employee Class is deleted')
+
+obj = Employee(['Evariste', 'Japhet', 'Venuste'], ['Damour', 'Jado', 'Claude'], ['Octave', 'Ben', 'Francine'])
+obj.overall()
+obj.get_staff()
+
+del obj
+
+
+
+
+    
+
+
 
 
 
