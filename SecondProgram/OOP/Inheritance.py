@@ -50,7 +50,14 @@ p.display()
 #N.B: Invoking the __int__ of the parent class is a must
 # otherwise, it will throw an error
 
+
+
+
+
+
+
 # We now going to learn the multiple inheritance in py
+# ERROR:__init__() takes 4 positional arguments but 8 were given
 
 class Woman(object): # parent class 1
     def __init__(self, name, age, level):
