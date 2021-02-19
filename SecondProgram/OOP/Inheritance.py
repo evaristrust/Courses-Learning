@@ -103,6 +103,7 @@ class Base:
 class Child(Base):
     def __init__(self, name, age):
         self.age = age
+        #Invoking the __init__ of the base class
         Base.__init__(self, name)
     #getAge
     def get_age(self):
@@ -111,6 +112,7 @@ class Child(Base):
 class grand_child(Child):
     def __init__(self, name, age, address):
         self.address = address
+        #Invoking __init__ for child (parent of grand_child)
         Child.__init__(self, name, age)
     #getAddress
     def get_address(self):
