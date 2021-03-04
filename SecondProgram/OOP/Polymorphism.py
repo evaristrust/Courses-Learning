@@ -91,9 +91,10 @@ def func(obj):
     obj.type()
     obj.location()
 
-usa_obj = USA()
-italy_obj = Italy()
+if __name__ == '__main__':
+    usa_obj = USA()
+    italy_obj = Italy()
 
-#Invoking the function here:
-func(usa_obj)
-func(italy_obj)
+    #Invoking the function here:
+    func(usa_obj)
+    func(italy_obj)

@@ -1,17 +1,17 @@
-#dealing with errors in python
+# dealing with errors in python
 # syntax error or exceptions
 # syntatical error occurs when the syntax is not correct
 # exception: the syntax is correct but it throws an error:
 
-#for example:
+# for example:
 
 list1 = [34, 2, 52, 63]
 #
-# print(list1[3])
-# print(list1[4]) # u will see the index error here: out of range
+# Print(list1[3])
+# Print(list1[4]) # u will see the index error here: out of range
 
-#let's now use try and except a bit
-#Index error
+# Let's now use try and except a bit
+# Index error
 try:
     print(list1[3])
     print(list1[4])
@@ -61,10 +61,5 @@ def divide():
     except ZeroDivisionError:
         return 'You can\'t divide a number with zero'
     else:
-        return result
+        return ('{} divided by {} is {}'.format(x, y, result))
 print(divide())
-
-
-
-
-
