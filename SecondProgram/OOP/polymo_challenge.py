@@ -14,14 +14,16 @@ class Wing(object):
             print('I think i can just walk')
 
 class Duck(object):
+    def __int__(self):
+        self._wing = Wing(1.8)
     def walk(self):
         print('I will walk till I die')
     def swim(self):
         print('This water is so woww to go through')
     def quack(self):
         print('Boom!! such sound\'s is terrible')
-    # def fly(self):
-    #     self._wing.fly()
+    def fly(self):
+        self._wing.fly()
 
 class Pinguin(object):
     def walk(self):
@@ -31,15 +33,16 @@ class Pinguin(object):
     def quack(self):
         print('OMG, Can I really play such music with my voice?')
 #create a function to test
-def test_duck(duck):
-    duck.walk()
-    duck.swim()
-    duck.quack()
+# def test_duck(duck):
+#     duck.walk()
+#     duck.swim()
+#     duck.quack()
 
 if __name__ == '__main__':
     duck_obj = Duck()
-    ping_obj = Pinguin()
-    #invoking the function test_duck down here
-    test_duck(duck_obj)
-    test_duck(ping_obj)
+    duck_obj.fly()
+    # ping_obj = Pinguin()
+    # #invoking the function test_duck down here
+    # test_duck(duck_obj)
+    # test_duck(ping_obj)
  
