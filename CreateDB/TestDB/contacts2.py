@@ -15,7 +15,7 @@ update_cursor.connection.commit() #connection property highly recommended to com
                                   #commit when you are happy with the changes
 update_cursor.close()
 
-for row in db.execute("SELECT * FROM contacts ORDER BY name"): # without using cursor
+for row in db.execute("SELECT DISTINCT * FROM contacts ORDER BY name"): # without using cursor
     print(row)
 
 db.close()

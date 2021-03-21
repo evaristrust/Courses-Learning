@@ -10,7 +10,7 @@ db.execute("INSERT INTO contacts VALUES('Bad Man', 2502321, 'bado@gmail.com')")
 
 #Querying my database by executing queries using cursor
 cursor = db.cursor()
-cursor.execute("SELECT * FROM contacts")
+cursor.execute("SELECT DISTINCT * FROM contacts")
 
 # print(cursor.fetchall()) # returns  a list of rows.. allowing moving back and forth through rows.
 # print(cursor.fetchone()) # This is quite useful... returns list in a style
@@ -21,6 +21,7 @@ for name, phone, email in cursor:
     print(name)
     print(phone)
     print(email)
+    print("-" * 20)
 
 cursor.close()
 
