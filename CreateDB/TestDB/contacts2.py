@@ -5,7 +5,7 @@ db = sqlite3.connect('contacts.sqlite')
 update_sql = "UPDATE contacts SET email = 'newmail@gmail.com' WHERE phone = 0234234"
 update_cursor = db.cursor()
 update_cursor.execute(update_sql)
-print("{} rows updated".format(update_cursor.rowcount))
+print("{} rows updated".format(update_cursor.rowcount)) # counting how many rows has been updated
 
 print("Are connection the same: {}".format(update_cursor.connection == db)) # check if stored connections are ==
 print("_" * 20)

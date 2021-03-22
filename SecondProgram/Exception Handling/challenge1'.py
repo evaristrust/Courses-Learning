@@ -9,7 +9,7 @@ def get_int(prompt):
         try:
             number = int(input(prompt))
             return number
-        except EOFError: #The order of exceptions always matter
+        except EOFError: #The order of exceptions always matters
             sys.exit(1)
         except: # This should really be ValueError exception
             print("Invalid input was entered")

@@ -13,7 +13,7 @@ new_phone = input("Please enter your phone: ") # B.C: Here's where sql injection
 update_sql = "UPDATE contacts SET email = ? WHERE phone = ?" # highly recommended where user input
 update_cursor = db.cursor()
 # update_cursor.executescript(update_sql) # executescript to allow executing multiple statements
-                                        # Can result into danger though
+                                        # Can result into danger though. just be careful (B.C)
 update_cursor.execute(update_sql, (new_email, new_phone))
 print("{} rows updated".format(update_cursor.rowcount))
 
