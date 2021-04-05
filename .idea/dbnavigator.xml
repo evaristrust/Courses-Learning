@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="ada3b47b-5f9a-43b1-ba4e-c0dd4209d859">
-        <schema name="main" object-types="index, constraint, column, view, table, dataset trigger" />
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -37,9 +37,7 @@ COMMIT;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="ada3b47b-5f9a-43b1-ba4e-c0dd4209d859" object-ref="schemas/main/tables/histories" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="ada3b47b-5f9a-43b1-ba4e-c0dd4209d859" />

@@ -1,12 +1,12 @@
 import sqlite3
 import pytz
 import datetime
-"""The modification in this codes from rollback1 is the {:.1f}
+"""The modification in this codes from rollback1 is the {:.2f}
     just to avoid an error of floating in the end results and inexact amount"""
 
 db = sqlite3.connect("accounts.sqlite", detect_types=sqlite3.PARSE_DECLTYPES)
 db.execute("CREATE TABLE IF NOT EXISTS accounts(name TEXT PRIMARY KEY NOT NULL,"
-           " balance INTEGER NOT NULL)") #Accounts table
+           "balance INTEGER NOT NULL)") #Accounts table
 db.execute("CREATE TABLE IF NOT EXISTS histories(time TIMESTAMP NOT NULL, account TEXT NOT NULL, "
            "amount INTEGER NOT NULL, PRIMARY KEY(time, account))")
 #create a view from histories

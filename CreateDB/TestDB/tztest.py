@@ -2,7 +2,7 @@ import sqlite3
 import pytz
 import datetime
 import pickle
-"""The modification in this codes from rollback1 is the {:.1f}
+"""The modification in this codes from rollback1 is the {:.2f}
     just to avoid an error of floating in the end results and inexact amount"""
 
 db = sqlite3.connect("accounts.sqlite", detect_types=sqlite3.PARSE_DECLTYPES)
