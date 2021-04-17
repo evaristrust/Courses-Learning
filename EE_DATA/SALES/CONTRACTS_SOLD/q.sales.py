@@ -29,7 +29,7 @@ df.info()
 
 #4. Going to study columns : customer name, district name, floor size and amount
 
-my_first_table = df.loc[:, ['district_name', 'signed_by', 'product_interest', 'floor_size', 'amount']]
+my_first_table = df.loc[:, ['district_name', 'customer_name', 'signed_by', 'product_interest', 'floor_size', 'amount']]
 top_5 = my_first_table.head(10)
 
 #5. check how many missing cells
@@ -106,23 +106,40 @@ print('TOTAL DISTRICTS IN EE RWANDA:', group_districts_amount.shape[0])
 print(final_sum_amount_under)
 
 #11. check the maximum house countrywide
-
 check_max = my_first_table['floor_size'].max()
-
 print('\nmaximum size floor size countrywide:', check_max)
-
 check_max_info = my_first_table[my_first_table['floor_size'] == check_max]
-
 print(check_max_info.loc[:, ['district_name', 'product_interest', 'floor_size', 'signed_by']])
 
-
+#12. check the minimum house countrywide
 check_min = my_first_table['floor_size'].min()
-
-print('\nmaximum size floor size countrywide:', check_min)
-
+print('\nminimum size floor size countrywide:', check_min)
 check_min_info = my_first_table[my_first_table['floor_size'] == check_min]
+print(check_min_info.loc[:, ['district_name', 'floor_size', 'customer_name']])
 
-print(check_min_info.loc[:, ['district_name', 'product_interest', 'floor_size', 'signed_by']])
+#13. check the maximun revenue countryside per floor and their details
+check_max_amount = my_first_table['amount'].max()
+print('\nmaximum Revenue per floor countrywide:', check_max_amount)
+check_max_amount_info = my_first_table[my_first_table['amount'] == check_max_amount]
+print(check_max_amount_info.loc[:, ['district_name', 'floor_size', 'customer_name']])
+
+#14. check the minimum revenue countryise per floor and its details
+min_zero_filter = my_first_table[my_first_table['amount'] > 0]
+check_min_amount = min_zero_filter['amount'].min()
+print('\nminimum Revenue per floor countrywide:', check_min_amount)
+check_min_amount_info = my_first_table[my_first_table['amount'] == check_min_amount]
+print(check_min_amount_info.loc[:, ['district_name', 'floor_size', 'customer_name']])
+
+#15. group by product interests and sort the sum of their amounts in descending order
+print('\nRevenues per product interests:')
+product_interest_group = my_first_table.groupby('product_interest')['amount'].sum().sort_values(ascending=False)
+print(product_interest_group)
+
+#16. maximum house in each district and sort them desc order
+print('\nMaximum floors by district; sorted in descending order:')
+check_max_group = my_first_table.groupby('district_name')['floor_size'].max().sort_values(ascending=False)
+print(check_max_group)
+
 
 
 
