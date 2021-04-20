@@ -15,7 +15,7 @@ df = pd.read_excel(r'D:\PERSONALS\EE\SALESFORCE REPORTS\SALES\rwandasales.xlsx')
 new_names = ['customer_name', 'district_name', 'sector_name', 'signed_by',
              'product_interest', 'currency', 'floor_size', 'contract_type', 'amount']
 
-df.set_axis(new_names, axis='columns', inplace=True)
+df.set_axis(new_names, axis='columns', inplace=True) # in place True means the original data set will be modified
 #
 # print(df.shape)
 # print(df.columns)
@@ -25,14 +25,15 @@ df.set_axis(new_names, axis='columns', inplace=True)
 df['contract_type'] = df['contract_type'].fillna('unknown')
 df['floor_size'] = df['floor_size'].fillna(0)
 
-df.info()
+#check the main info of our dataset
+# df.info()
 
-#4. Going to study columns : customer name, district name, floor size and amount
+#4. Going to study columns : customer_name, district_name, floor_size, signed_by, product_interest and amount
 
 my_first_table = df.loc[:, ['district_name', 'customer_name', 'signed_by', 'product_interest', 'floor_size', 'amount']]
-top_5 = my_first_table.head(10)
+top_5 = my_first_table.head(10) #printing the top 10 rows of our data
 
-#5. check how many missing cells
+#5. check how many missing cells in each column! Not necessary
 
 # print('Missing values in District_name: ', my_first_table['district_name'].isnull().sum())
 # print('Missing values in product_interest: ', my_first_table['district_name'].isnull().sum())
@@ -139,13 +140,3 @@ print(product_interest_group)
 print('\nMaximum floors by district; sorted in descending order:')
 check_max_group = my_first_table.groupby('district_name')['floor_size'].max().sort_values(ascending=False)
 print(check_max_group)
-
-
-
-
-
-
-
-
-
-
