@@ -31,7 +31,7 @@ df['floor_size'] = df['floor_size'].fillna(0)
 #4. Going to study columns : customer_name, district_name, floor_size, signed_by, product_interest and amount
 
 my_first_table = df.loc[:, ['district_name', 'customer_name', 'signed_by', 'product_interest', 'floor_size', 'amount']]
-top_5 = my_first_table.head(10) #printing the top 10 rows of our data
+top_10 = my_first_table.head(10) #printing the top 10 rows of our data
 
 #5. check how many missing cells in each column! Not necessary
 
