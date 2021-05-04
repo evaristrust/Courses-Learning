@@ -27,9 +27,9 @@ def allow_cred():
     unpaid_credit = total_credits - total_credits_repaid # difference btn credits and repaid credit (balance)
     absolute_extra = abs(max_credit - unpaid_credit)
     if unpaid_credit < 10000:
-        print('You are allowed to give credits of no more than {}'.format(absolute_extra))
+        print('You are allowed to give credits of no more than {}RWF'.format(absolute_extra))
     else:
-        print('No, you can\'t give credits... Reached maximum with extra amount of {}'.format(absolute_extra))
-    print('Your unpaid credit is {}'.format(unpaid_credit))
+        print('No, you can\'t give credits... Reached maximum with extra amount of {}RWF'.format(absolute_extra))
+    print('Your unpaid credit is {}RWF'.format(unpaid_credit))
 
 allow_cred()

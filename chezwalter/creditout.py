@@ -21,4 +21,4 @@ cred_total_col = pd.to_numeric(cred_total_col)
 
 #Get the total business credit on products
 total_credits = cred_total_col.sum()
-# print(total_credits)
+print('THE TOTAL BUSINESS CREDITS:{}RWF'.format(total_credits))
