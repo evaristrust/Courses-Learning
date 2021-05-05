@@ -1,3 +1,5 @@
+#This is not part of my project
+#It's the addition learning tip on how to read and write in the google spreadsheet
 # importing the required libraries
 import gspread
 import pandas as pd

@@ -44,7 +44,10 @@ my_columns = [
 ]
 
 #setting axis into our dataframe for better readability
+#Original names of the columns in the df are in the local language that the form filler understands
+#The new columns names are for the ease of data analysis using English... Quite a simple translation haha right?
 df_frame.set_axis(my_columns, axis='columns', inplace=True)
 # print(df_frame.columns)
-#drop the new entry that was entered for trial
+
+#drop the new entry that was entered for trial and reset the index
 df_frame = df_frame.drop([74, 75]).reset_index(drop=True)

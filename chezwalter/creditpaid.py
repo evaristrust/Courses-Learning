@@ -7,15 +7,12 @@ from creditout import cred_action
 columns:  'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay'
 """
 #Study of credits given out
-#Notify based on the maximum credit set
-
-
 cred_paid_df = df_frame.loc[:, [ 'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay']]
 
 #analyse the purchase (Kurangura)
 cred_paid_action = cred_paid_df[cred_paid_df['action'] == 'Kwishyura ideni'].reset_index(0)
 
-#check if I can change the dtype in total purchase from object to int
+#Change total repay column dtype from object to int
 repaid_col = cred_paid_action['total_repay']
 repaid_col = pd.to_numeric(repaid_col)
 
@@ -23,6 +20,10 @@ repaid_col = pd.to_numeric(repaid_col)
 total_credits_repaid = repaid_col.sum()
 
 #create a function to allow more credit
+#total_credits = the sum of all credits given out
+#max_credit = the limit credit amount we can have in entirely in the business
+#unpaid_credit = the difference btn total_credits and repaid credits
+#absolute_extra = the absolute value of the difference btn max_credit and unpaid_credit
 def allow_cred():
     max_credit = 10000
     unpaid_credit = total_credits - total_credits_repaid # difference btn credits and repaid credit (balance)
@@ -35,7 +36,8 @@ def allow_cred():
 
 allow_cred()
 
-#Group the credits owners with their credits, paid, and balance and sort them in descending
+#Group by debtor_names with their credits, paid, and balance and sort them in descending
+#descending order will show us those who ever took the huge debts
 print('--'*20,'TOTAL CREDITS BY DEBTOR NAMES','--'*20)
 debtors = cred_action.groupby('debtor_name')['product_cred_total'].sum()
 print(debtors.sort_values(ascending=False)) #total credits by names
