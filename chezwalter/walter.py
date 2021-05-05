@@ -39,12 +39,12 @@ my_columns = [
     'new_purchase_name', 'quantity_new_purchase', 'case_new_purchase?', 'new_purchase_unit_priced',
     'new_purchase_total', 'tool_name', 'tool_quantity', 'case_tool?', 'tool_unit_price',
     'tool_total_price', 'product_credited', 'product_cred_quantity', 'product_cred_case?',
-    'product_cred_unit_price', 'product_cred_total', 'debtor_name', 'debtor_name', 'credit_balance',
+    'product_cred_unit_price', 'product_cred_total', 'debtor_name', 'payer_name', 'credit_balance',
     'total_repay', 'service_name', 'service_amount', 'dmaged_product_name', 'amount_dmaged'
 ]
 
 #setting axis into our dataframe for better readability
 df_frame.set_axis(my_columns, axis='columns', inplace=True)
 # print(df_frame.columns)
-#drop the new entry that was entered to verify
+#drop the new entry that was entered for trial
 df_frame = df_frame.drop([74, 75]).reset_index(drop=True)
