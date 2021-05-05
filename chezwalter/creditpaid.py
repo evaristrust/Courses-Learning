@@ -2,6 +2,7 @@ import pandas as pd
 import walter
 from walter import df_frame
 from creditout import total_credits
+from creditout import cred_action
 """
 columns:  'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay'
 """
@@ -34,14 +35,15 @@ def allow_cred():
 
 allow_cred()
 
-#Group the credits owners with their credits, paid, and balance
-debtors_df = df_frame.loc[:, ['time_stamp','debtor_name', 'payer_name', 'product_cred_total', 'total_repay', 'product_credited']]
+#Group the credits owners with their credits, paid, and balance and sort them in descending
 print('--'*20,'TOTAL CREDITS BY DEBTOR NAMES','--'*20)
-print(debtors_df.groupby('debtor_name')['product_cred_total'].sum()) #total credits by names
+debtors = cred_action.groupby('debtor_name')['product_cred_total'].sum()
+print(debtors.sort_values(ascending=False)) #total credits by names
+
 print('\n','--'*20,'TOTAL PAYMENT BY DEBTOR NAMES','--'*20)
-print(debtors_df.groupby('payer_name')['total_repay'].sum()) #total payment by names
+debt_payers = cred_paid_action.groupby('payer_name')['total_repay'].sum()
+print(debt_payers.sort_values(ascending=False)) #total payment by names sorted in desc order
 
-#check chapati in debtors' name
-
-s = debtors_df[debtors_df['debtor_name'] == 'Chapati']
-print(s.loc[:, ['time_stamp','debtor_name', 'product_cred_total', 'product_credited']])
+#check chapati in debtors' name [not sure if this is someone's name hhaha]
+# s = debtors_df[debtors_df['debtor_name'] == 'Chapati']
+# print(s.loc[:, ['time_stamp','debtor_name', 'product_cred_total', 'product_credited']])
