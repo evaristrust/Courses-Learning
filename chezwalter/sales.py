@@ -2,29 +2,31 @@ import pandas as pd
 import walter
 from walter import df_frame
 """
-columns:  'time_stamp', 'action', 'product_purchase_name',
-'quantity_purchase', 'case_purchase?', 'unit_purchase_price', 'total_purchase_price'
+columns: 'time_stamp', 'action', 'product_sold_name', 'quantity_sold',
+         'case_sold?', 'unit_sell_price', 'total_sell_price'
 """
 
-sales_df = df_frame.loc[:, ['time_stamp', 'action', 'product_purchase_name',
-                                     'quantity_purchase', 'case_purchase?', 'unit_purchase_price',
-                                     'total_purchase_price']]
+sales_df = df_frame.loc[:, ['time_stamp', 'action', 'product_sold_name', 'quantity_sold',
+                            'case_sold?', 'unit_sell_price', 'total_sell_price']]
 
-#analyse the purchase (Kurangura)
-sales_action = sales_df[purchase_df['action'] == 'Kurangura'].reset_index(0)
-product_name_group = purchase_action.groupby('product_purchase_name')['quantity_purchase'].sum()
+#analyse the Sales (kugurisha)
+sales_action = sales_df[sales_df['action'] == 'Gucuruza'].reset_index(0)
 
-#Check the most purchased product
-product_name_group_high = product_name_group.sort_values(ascending=False)
-print(product_name_group_high.head(10))
+#Change the dtype in total sales from object to int
+sales_total_col = sales_action['total_sell_price']
+sales_total_col = pd.to_numeric(sales_total_col)
 
-#Check the ranges type in total_purchase_price
-# 1. range 0 t0 74
-column_purchase= purchase_action['total_purchase_price']
-column_purchase_range1 = column_purchase[43]
-print(type(column_purchase_range1))
+#Group by product sold name with the total sales
+product_name_group = sales_action.groupby('product_sold_name')['total_sell_price'].sum()
 
-#check if I can change the dtype in total purchase from object to int
-purchase_total_col = purchase_action['total_purchase_price']
-purchase_total_col = pd.to_numeric(purchase_total_col)
-print(purchase_total_col.dtype)
+#group the list of sales with their amount in descending order
+product_name_group_desc = product_name_group.sort_values(ascending=False)
+print(product_name_group_desc.head(10))
+
+#Group by product sold name with their occurance count
+product_name_group = sales_action.groupby('product_sold_name')['product_sold_name'].count()
+
+#group the list of sales with their occurance count
+product_name_count_desc = product_name_group.sort_values(ascending=False)
+print()
+print(product_name_count_desc.head(10))

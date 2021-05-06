@@ -81,3 +81,4 @@ b)set the maximum credit to be 10,000 (completed)
 --- show over limit amount
 c) group credits by owners/debtor_name (total debt, repaid, balance)
 ----When the balance is 0, remove the debtor from the list
+d) Old debts and newly debts
