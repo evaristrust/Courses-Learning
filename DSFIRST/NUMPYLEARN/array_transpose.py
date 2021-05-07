@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-#1. create an array range from 6 to 100, spaced by three, 10 by 5
+#1. create an array range from 6 to 100, spaced by three, 8 by 4
 
 myarray = np.arange(6, 100, 3).reshape(8, 4)
 print('MY FIRST ARRAY:')
