@@ -21,6 +21,7 @@ product_name_group = sales_action.groupby('product_sold_name')['total_sell_price
 
 #group the list of sales with their amount in descending order
 product_name_group_desc = product_name_group.sort_values(ascending=False)
+print('TOP 10 SOLD PRODUCTS WITH HIGH REVENUES:')
 print(product_name_group_desc.head(10))
 
 #Group by product sold name with their occurance count
@@ -29,4 +30,14 @@ product_name_group = sales_action.groupby('product_sold_name')['product_sold_nam
 #group the list of sales with their occurance count
 product_name_count_desc = product_name_group.sort_values(ascending=False)
 print()
+print('TOP 10 SOLD PRODUCTS WITH HIGH OCCURANCE:')
 print(product_name_count_desc.head(10))
+print()
+print('ALL SOLD PRODDUCTS WITH THEIR REVENUES:')
+print(product_name_group_desc)
+
+#get the totol sold
+total_sales = sales_action['total_sell_price'].sum()
+print()
+print('Total sales: {}'.format(total_sales))
+print('average daily sales: {}'.format(total_sales/7))
