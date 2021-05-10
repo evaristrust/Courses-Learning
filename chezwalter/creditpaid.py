@@ -7,7 +7,7 @@ from creditout import cred_action
 columns:  'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay'
 """
 #Study of credits given out
-cred_paid_df = df_frame.loc[:, [ 'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay']]
+cred_paid_df = df_frame[[ 'time_stamp', 'action', 'payer_name', 'credit_balance', 'total_repay']]
 
 #analyse the purchase (Kurangura)
 cred_paid_action = cred_paid_df[cred_paid_df['action'] == 'Kwishyura ideni'].reset_index(0)
@@ -48,4 +48,4 @@ print(debt_payers.sort_values(ascending=False)) #total payment by names sorted i
 
 #check chapati in debtors' name [not sure if this is someone's name hhaha]
 s = cred_action[cred_action['debtor_name'] == 'Chapati']
-print(s.loc[:, ['time_stamp','debtor_name', 'product_cred_total', 'product_credited']])
+print(s[['time_stamp','debtor_name', 'product_cred_total', 'product_credited']])

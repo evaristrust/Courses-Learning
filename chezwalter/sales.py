@@ -6,7 +6,7 @@ columns: 'time_stamp', 'action', 'product_sold_name', 'quantity_sold',
          'case_sold?', 'unit_sell_price', 'total_sell_price'
 """
 
-sales_df = df_frame.loc[:, ['time_stamp', 'action', 'product_sold_name', 'quantity_sold',
+sales_df = df_frame[['time_stamp', 'action', 'product_sold_name', 'quantity_sold',
                             'case_sold?', 'unit_sell_price', 'total_sell_price']]
 
 #analyse the Sales (kugurisha)

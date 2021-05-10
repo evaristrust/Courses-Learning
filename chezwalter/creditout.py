@@ -6,7 +6,7 @@ columns:  'time_stamp', 'action', 'product_credited', 'product_cred_quantity', '
 'product_cred_unit_price', 'product_cred_total', 'debtor_name'
 """
 #Study of credits given out
-credit_df = df_frame.loc[:, ['time_stamp', 'action', 'product_credited', 'product_cred_quantity',
+credit_df = df_frame[['time_stamp', 'action', 'product_credited', 'product_cred_quantity',
                                'product_cred_case?', 'product_cred_unit_price', 'product_cred_total',
                                'debtor_name']]
 
