@@ -1,6 +1,7 @@
 import pandas as pd
 import walter
 from walter import df_frame
+from purchase import total_purchase
 """
 columns: 'time_stamp', 'action', 'product_sold_name', 'quantity_sold',
          'case_sold?', 'unit_sell_price', 'total_sell_price'
@@ -38,4 +39,12 @@ print(product_name_group_desc)
 total_sales = sales_action['total_sell_price'].sum()
 print()
 print('Total sales: {}'.format(total_sales))
-print('average daily sales: {}'.format(total_sales/7))
+# print('average daily sales: {}'.format(total_sales/7))
+print('\nANALYSIS OF THE STOCK VALUES FROM PUCHASE AND SALES AMOUNT')
+
+# #create a new df containing total sales and total purchase with their difference
+data = [total_purchase, total_sales, total_purchase - total_sales]
+index = ['TOTAL PURCHASE', 'TOTAL SALES', 'VALUE IN STOCK']
+columns = ['RESULTS']
+df_stock = pd.DataFrame(data, index, columns)
+print(df_stock.transpose())
