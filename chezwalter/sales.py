@@ -24,14 +24,12 @@ product_name_group_desc = product_name_group.sort_values(ascending=False)
 print('TOP 10 SOLD PRODUCTS WITH HIGH REVENUES:')
 print(product_name_group_desc.head(10))
 
-#Group by product sold name with their occurance count
-product_name_group = sales_action.groupby('product_sold_name')['product_sold_name'].count()
-
 #group the list of sales with their occurance count
 product_name_count_desc = product_name_group.sort_values(ascending=False)
 print()
 print('TOP 10 SOLD PRODUCTS WITH HIGH OCCURANCE:')
-print(product_name_count_desc.head(10))
+products_count = sales_action['product_sold_name'].value_counts().head(10)
+print(products_count)
 print()
 print('ALL SOLD PRODDUCTS WITH THEIR REVENUES:')
 print(product_name_group_desc)

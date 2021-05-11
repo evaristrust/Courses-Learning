@@ -50,4 +50,4 @@ df_frame.set_axis(my_columns, axis='columns', inplace=True)
 # print(df_frame.columns)
 
 #drop the new entry that was entered for trial and reset the index
-df_frame = df_frame.drop([74, 75]).reset_index(drop=True)
+df_frame = df_frame.drop([74, 75]).reset_index(drop=True)#ideni japhet and kurangura urwagwa...
