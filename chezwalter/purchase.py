@@ -26,4 +26,3 @@ print(product_name_group_high)
 
 #checking the total purchase up to date
 total_purchase =  purchase_action['total_purchase_price'].sum()
-print('TOTAL PURCHASE: {}'.format(total_purchase))
