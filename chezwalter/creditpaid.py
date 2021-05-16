@@ -45,6 +45,3 @@ print(debtors.sort_values(ascending=False)) #total credits by names
 print('\n','--'*20,'TOTAL PAYMENT BY DEBTOR NAMES','--'*20)
 debt_payers = cred_paid_action.groupby('payer_name')['total_repay'].sum()
 print(debt_payers.sort_values(ascending=False)) #total payment by names sorted in desc order
-#check chapati in debtors' name [not sure if this is someone's name hhaha]
-s = cred_action[cred_action['debtor_name'] == 'Chapati']
-print(s[['time_stamp','debtor_name', 'product_cred_total', 'product_credited']])

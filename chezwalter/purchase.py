@@ -22,7 +22,7 @@ product_name_group = purchase_action.groupby('product_purchase_name')['total_pur
 
 #Check the most purchased product
 product_name_group_high = product_name_group.sort_values(ascending=False)
-print(product_name_group_high)
+# print(product_name_group_high)
 
 #checking the total purchase up to date
 total_purchase =  purchase_action['total_purchase_price'].sum()
