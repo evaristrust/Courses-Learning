@@ -1,9 +1,12 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import walter
 from walter import df_frame
 from purchase import total_purchase
 from tools import total_tools
 from service import total_service
+from damage import total_damaged
 """
 columns: 'time_stamp', 'action', 'product_sold_name', 'quantity_sold',
          'case_sold?', 'unit_sell_price', 'total_sell_price'
@@ -44,9 +47,12 @@ print()
 print('\nANALYSIS OF THE STOCK VALUES FROM PUCHASE AND SALES AMOUNT')
 
 # #create a new df containing total sales and total purchase with their difference
-value_stock = total_purchase - (total_sales + total_tools + total_service)
-data = [total_purchase, total_sales, total_tools, total_service, value_stock]
-index = ['TOTAL PURCHASE', 'TOTAL SALES', 'TOOLS', 'SERVICES', 'VALUE IN STOCK']
+value_stock = total_purchase - (total_sales + total_tools + total_service + total_damaged)
+data = [total_purchase, total_sales, total_tools, total_service, total_damaged, value_stock]
+index = ['TOTAL PURCHASE ', 'TOTAL SALES ', 'TOOLS ', 'SERVICES ', 'DAMAGES ', 'VALUE IN STOCK']
 columns = ['RESULTS']
 df_stock = pd.DataFrame(data, index, columns)
 print(df_stock.transpose())
+plt.plot(df_stock, color='green', ls='-', lw=3.5)
+plt.show()
+# sns.distplot(product_name_group, kde=False)

@@ -24,3 +24,4 @@ service_name_group_high = service_name_group.sort_values(ascending=False)
 #checking the total service up to date
 funded_cash = 88000 #remove cash paid not from sales [house rent and ipatante]
 total_service =  service_action['service_amount'].sum() - funded_cash
+# print(service_action)

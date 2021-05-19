@@ -23,3 +23,4 @@ dmaged_product_name_group_high = dmaged_product_name_group.sort_values(ascending
 
 #checking the total service up to date
 total_damaged =  damage_action['amount_dmaged'].sum()
+# print(total_damaged)

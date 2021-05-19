@@ -26,3 +26,4 @@ product_name_group_high = product_name_group.sort_values(ascending=False)
 
 #checking the total purchase up to date
 total_purchase =  purchase_action['total_purchase_price'].sum()
+# print(total_purchase)
