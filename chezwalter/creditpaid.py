@@ -36,12 +36,16 @@ def allow_cred():
 
 allow_cred()
 
-#Group by debtor_names with their credits, paid, and balance and sort them in descending
+#Group by debtor_names with their credits, paid, and balance and sort sum in descending
+#set to_frame and rename the  product_cred_total to total and debtor_name to name
 #descending order will show us those who ever took the huge debts
 print('--'*20,'TOTAL CREDITS BY DEBTOR NAMES','--'*20)
-debtors = cred_action.groupby('debtor_name')['product_cred_total'].sum()
-print(debtors.sort_values(ascending=False)) #total credits by names
+debtors = cred_action.groupby(['debtor_name'], as_index=False)['product_cred_total'].sum()
+debtors.rename(columns={'product_cred_total': 'total credit', 'debtor_name': 'name'}, inplace=True)
+print(debtors.sort_values(by='total credit', ascending=False)) #total credits by names
 
+#Do the same for the credit repayment
 print('\n','--'*20,'TOTAL PAYMENT BY DEBTOR NAMES','--'*20)
-debt_payers = cred_paid_action.groupby('payer_name')['total_repay'].sum()
-print(debt_payers.sort_values(ascending=False)) #total payment by names sorted in desc order
+debt_payers = cred_paid_action.groupby(['payer_name'], as_index=False)['total_repay'].sum()
+debt_payers.rename(columns={'total_repay': 'total repay', 'payer_name': 'name'}, inplace=True)
+print(debt_payers.sort_values(by='total repay',ascending=False))
