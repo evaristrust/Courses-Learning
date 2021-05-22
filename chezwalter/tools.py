@@ -24,6 +24,6 @@ tool_name_group_high = tool_name_group.sort_values(ascending=False)
 # print(tool_name_group_high)
 
 #checking the total purchase up to date
-funded_cash = 9000 #remove cash that received from outside
+funded_cash = 9000 + 3000 + 2500 + 2000  #remove cash that received from outside
 total_tools =  tools_action['tool_total_price'].sum() - funded_cash
 # print(total_tools)
