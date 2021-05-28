@@ -7,6 +7,8 @@ from purchase import total_purchase
 from tools import total_tools
 from service import total_service
 from damage import total_damaged
+from creditpaid import total_imported
+from newproducts import total_new
 """
 columns: 'time_stamp', 'action', 'product_sold_name', 'quantity_sold',
          'case_sold?', 'unit_sell_price', 'total_sell_price'
@@ -47,9 +49,9 @@ print()
 print('\nANALYSIS OF THE STOCK VALUES FROM PUCHASE AND SALES AMOUNT')
 
 # #create a new df containing total sales and total purchase with their difference
-removable = total_sales + total_tools + total_service + total_damaged
+removable = total_sales + total_tools + total_service + total_damaged + total_imported
 value_stock = total_purchase - removable
-data = [total_purchase, total_sales, total_tools, total_service, total_damaged, value_stock]
+data = [total_purchase + total_new, total_sales + total_imported, total_tools, total_service, total_damaged, value_stock]
 index = ['TOTAL PURCHASE ', 'TOTAL SALES ', 'TOOLS ', 'SERVICES ', 'DAMAGES ', 'VALUE IN STOCK']
 columns = ['RESULTS']
 df_stock = pd.DataFrame(data, index, columns)

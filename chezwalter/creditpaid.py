@@ -18,7 +18,7 @@ repaid_col = pd.to_numeric(repaid_col)
 
 #Get the total business credit on products
 total_credits_repaid = repaid_col.sum()
-
+total_imported = repaid_col.sum() # to be imported in sales
 #create a function to allow more credit
 #total_credits = the sum of all credits given out
 #max_credit = the limit credit amount we can have in entirely in the business
