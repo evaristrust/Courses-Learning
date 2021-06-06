@@ -42,10 +42,12 @@ allow_cred()
 print('--'*20,'TOTAL CREDITS BY DEBTOR NAMES','--'*20)
 debtors = cred_action.groupby(['debtor_name'], as_index=False)['product_cred_total'].sum()
 debtors.rename(columns={'product_cred_total': 'total credit', 'debtor_name': 'name'}, inplace=True)
+debtors.index.name = 'Indices'
 print(debtors.sort_values(by='total credit', ascending=False)) #total credits by names
 
 #Do the same for the credit repayment
 print('\n','--'*20,'TOTAL PAYMENT BY DEBTOR NAMES','--'*20)
 debt_payers = cred_paid_action.groupby(['payer_name'], as_index=False)['total_repay'].sum()
 debt_payers.rename(columns={'total_repay': 'total repay', 'payer_name': 'name'}, inplace=True)
+debt_payers.index.name = 'Indices'
 print(debt_payers.sort_values(by='total repay',ascending=False))
