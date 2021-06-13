@@ -25,7 +25,7 @@ total_imported = repaid_col.sum() # to be imported in sales
 #unpaid_credit = the difference btn total_credits and repaid credits
 #absolute_extra = the absolute value of the difference btn max_credit and unpaid_credit
 def allow_cred():
-    max_credit = 10000
+    max_credit = 15000
     unpaid_credit = total_credits - total_credits_repaid # difference btn credits and repaid credit (balance)
     absolute_extra = abs(max_credit - unpaid_credit)
     if unpaid_credit < max_credit:
