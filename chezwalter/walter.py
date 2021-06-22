@@ -40,7 +40,7 @@ my_columns = [
     'new_purchase_total', 'tool_name', 'tool_quantity', 'case_tool?', 'tool_unit_price',
     'tool_total_price', 'product_credited', 'product_cred_quantity', 'product_cred_case?',
     'product_cred_unit_price', 'product_cred_total', 'debtor_name', 'payer_name', 'credit_balance',
-    'total_repay', 'service_name', 'service_amount', 'dmaged_product_name', 'amount_dmaged'
+    'total_repay', 'service_name', 'service_amount', 'control_amount', 'withdraw', 'wreceipt_no', 'deposit', 'dreceipt_no', 'dmaged_product_name', 'amount_dmaged'
 ]
 
 #setting axis into our dataframe for better readability
