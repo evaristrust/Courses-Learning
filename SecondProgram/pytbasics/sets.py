@@ -131,7 +131,7 @@ print(odd)
 
 # challenge.............
 # create a  program that takes some text and returns a list of
-# all the characters in the text aht are not vowels,
+# all the characters in the text that are not vowels,
 # sorted in alphabetical order
 # you can either enter the text from the keyboard
 # or inialise a string variable with the string
@@ -139,10 +139,9 @@ print("---" * 40)
 example = "I will even die an arsenal fan unless you mothefuckers are shouting"
 
 # create a set of vowels
-
 vowels = frozenset("aiueo ")
-# create a set of example
 
+# create a set of example
 example_set = set(example)
 
 final_set = example_set.difference(vowels)
@@ -159,21 +158,3 @@ my_sent_set = set(my_sentence)
 # my_sent_set.difference_update(my_vowels)
 set_final = my_sent_set.difference(my_vowels)
 print('Consonents in the sentence are: {}'.format(sorted(set_final)))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
