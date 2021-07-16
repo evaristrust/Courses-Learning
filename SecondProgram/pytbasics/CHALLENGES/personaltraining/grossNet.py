@@ -1,10 +1,11 @@
-
+#ask a user their gross salary to output their net salary (Rwandan)
+#try and see if you can compute their gross pay from their net pay
 class Net:
 
     def __init__(self, balance):
         self._balance = balance
 
-    def getNet(self, amount):
+    def getNet(self):
         low = 30000 # lower earning (zero taxed)
         med = 100000 # medium earning (20% taxed)
         p = int(input('What\'s your gross salary? ')) # the amount in gross
@@ -22,7 +23,7 @@ if __name__ == '__main__':
 while check:
     user = input('Wanna check your net or your gross? ')
     if user.upper() == 'NET':
-        check.getNet(0)
+        check.getNet()
     else:
         print('sorry, we don\'t have that option')
         break
