@@ -5,6 +5,7 @@ class Net:
     def __init__(self, balance):
         self._balance = balance
 
+    #function to compute the net salary
     def getNet(self):
         low = 30000 # lower earning (zero taxed)
         med = 100000 # medium earning (20% taxed)
@@ -17,6 +18,7 @@ class Net:
         else:
             print('Your Net Salary is {}'.format(round(p - ((p-med)*0.3 + (70000*0.2) + s))))
 
+    #function to compute the pay as you earn (PAYE)
     def getPaye(self):
             low = 30000 # lower earning (zero taxed)
             med = 100000 # medium earning (20% taxed)
@@ -26,16 +28,16 @@ class Net:
             elif p <= med:
                 print('Your PAYE is {}'.format((p-low)*0.2))
             else:
-                print('Your Net Salary is {}'.format((p-med)*0.3 + (70000*0.2)))
+                print('Your PAYE is {}'.format((p-med)*0.3 + (70000*0.2)))
 
 if __name__ == '__main__':
     check = Net(0)
 
 while check:
     user = input('Wanna check your PAYE or NET Salary? ')
-    if user.upper() == 'NET':
+    if user.upper().strip() == 'NET':
         check.getNet()
-    elif user.lower() == 'paye':
+    elif user.lower().strip() == 'paye':
         check.getPaye()
     else:
         print('sorry, we don\'t have that option')
